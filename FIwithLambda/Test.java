@@ -1,4 +1,4 @@
-package com.ivy.functional;
+
 
 @FunctionalInterface
 public interface Test {
