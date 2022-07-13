@@ -90,18 +90,68 @@
  *  and JVM will execute that impl class at runtime
  * 
  */
-public class Program implements Test{
+ /*
+ *  Default Methods :
+    ---> Why default methods introduced in JDK8?
+    --->What are the advantages with default methods?
+
+        "Default  methods are used to avoid implementation classes"
+
+    #1. Default methods are nothing but concrete methods
+    #2. LE are used to replace the implementation classes. i.e. Use LE insted of implementation
+        class
+    #3. Default methods is used to replace the implementation classes
+
+    @FunctionalInterfaces
+    public interface Demo{
+        public void m1();                Demo d = ()->s.o.p("Rushikesh");
+    }    
+ 
+    * Why to use LE? ---> 1. no need implementation class
+                          2. reduce the lines of code
+
+ */
+
+ /*
+    ====Functional interfaces with default methods != Abstract Class====
+
+    #1. Abstract class cant refer Lambda Expression where as functional interface with
+    default method can refer lambda expression
+
+    #2. Inside Abstract class we can override object class methods but cant do in functional interface
+
+    #3. Inside abstract class we can declare constructors but cant declare constructor inside interface
+
+    #4. Abstract class can talk about state of the object but interface never talks about state of the object
+
+    #5. In abstract class we can declare instance and static blocks but inside interface we cant declare instance 
+        and static block
+
+    #6. Inside abstract class we can declare instance variables which are required for child classes inside interface 
+        every variable always public,static,final and we cant declare instance variable     
+
+ */     
+public class Notes {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stu
-		Test t = new Program();
+		//Test t = new Notes();
+        Test t = ()->System.out.println("Hello from Lambda !");
 		t.print();
+        t.printing();
 	}
 
 }
 
 interface Test{
+    public void printing();
 	default void print() {
-		System.out.println("Hello World!");
+		System.out.println("Hello World! from Test");
+	}
+}
+
+interface Test1{
+	default void print() {
+		System.out.println("Hello World! from Test 1");
 	}
 }
