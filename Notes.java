@@ -130,7 +130,25 @@
     #6. Inside abstract class we can declare instance variables which are required for child classes inside interface 
         every variable always public,static,final and we cant declare instance variable     
 
- */     
+ */   
+
+ /*
+  *   =========STATIC METHOD in INTERFACE==================
+    
+    Functional Interface = SAM + 0 or more default methods + 0 or more static methods
+
+    #1. from JDK 1.8 version we can declare static methods inside interface.
+    #2. Static methods are used to define general utility methods
+    #3. Static methods will not inherited into impl class, so if we want to call static methods call
+        directly from classname
+    #4. overriding concept is not applicable for interface sattic methods
+    #5. we can write main() method inside interface because it supports static methods    
+
+    Utility Methods = The code which will use many places is called utility methods.
+
+    Using static methods inside interface , we can reduce number of classes in project.
+
+  */
 public class Notes {
 
 	public static void main(String[] args) {
